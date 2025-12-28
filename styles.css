@@ -1,0 +1,319 @@
+:root {
+  --bg: #ffffff;
+  --text: #0b0b0c;
+  --text-hover: #5b5b62;
+  --muted: #5b5b62;
+  --accent: #2222ff;
+  --border: #e9e9ee;
+  --card: #f8f8fb;
+  --page-margin-lg: 100px; 
+  --header-height: 80px; 
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+/* --- 1. BODY LOCK --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Quicksand", sans-serif;
+  height: 100%;
+  overflow: hidden; 
+}
+
+/* --- 2. HEADER --- */
+.site-header {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 0 clamp(16px, 4vw, var(--page-margin-lg));
+  border-bottom: 1px solid var(--border);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  z-index: 1000; 
+  height: var(--header-height);
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.nav-right { justify-content: flex-end; }
+
+/* Global Header Button Style (Projects & About) */
+.nav-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 12px 18px;
+  font-family: "Momo Signature", cursive !important;
+  font-weight: 600;
+  font-size: 16px; /* Adjusted size for clean nav */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Specific Override for the Name in the Header */
+#name-clara-juong-header {
+  font-family: "Momo Signature", cursive; /* Keeps your name as signature */
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.nav-btn:hover, .icon-btn:hover {
+  transform: translateY(-4px);
+  color: var(--text-hover);
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* --- 3. ANIMATED HOME NAMES --- */
+.name-clara, .name-juong {
+  position: fixed;
+  font-family: "Momo Signature", cursive;
+  font-weight: 700;
+  font-size: clamp(48px, 10vw, 100px); 
+  color: var(--text);
+  z-index: 100; 
+  pointer-events: none; 
+  text-shadow: 0 0 10px var(--bg), 0 0 20px var(--bg);
+}
+
+.name-clara.hidden, .name-juong.hidden {
+  display: none !important;
+}
+
+.name-clara {
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-100% - 0.5em), -50%); 
+  animation: sandFadeInOut 6s ease-in-out infinite;
+}
+
+.name-juong {
+  top: 50%;
+  left: 50%;
+  transform: translate(0.5em, -50%); 
+  animation: sandFadeInOut 6s ease-in-out infinite; 
+}
+
+@keyframes sandFadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* --- 4. SECTION & SCROLL LOGIC --- */
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  display: none; 
+  opacity: 0;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg); 
+  z-index: 500; 
+  padding: 60px clamp(16px, 4vw, var(--page-margin-lg));
+  transition: opacity 0.4s ease;
+}
+
+.section.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* CAROUSEL SPECIAL CASE */
+#section-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+#section-carousel.visible {
+  display: block;
+}
+
+.carousel-container, .carousel-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide.active { opacity: 1; }
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- 5. PROJECTS GRID --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto 100px auto;
+}
+
+.project-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay { opacity: 1; }
+.project-card:hover img { transform: scale(1.05); }
+
+.project-overlay h3 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- 6. ABOUT CONTENT --- */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto 100px auto;
+  align-items: start;
+}
+
+.about-section-secondary .profile { grid-column: 2; }
+.about-section-secondary .bio { grid-column: 1; grid-row: 1; }
+
+.profile-image {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.bio p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+/* --- 7. RESPONSIVE --- */
+@media (max-width: 900px) {
+  .projects-grid, .about-content { grid-template-columns: 1fr; }
+  .about-section-secondary .profile { grid-column: 1; }
+  .name-clara, .name-juong { font-size: 48px; }
+}
+
+/* This targets PROJECTS and ABOUT */
+.nav-btn {
+  font-family: "Momo Signature", cursive !important;
+  font-size: 16px !important;
+  text-decoration: none;
+}
+
+/* This targets YOUR NAME */
+#name-clara-juong-header {
+  font-family: "Momo Signature", cursive !important;
+  font-size: 24px !important;
+}
+
+/* Specifically target the About title */
+#about-title {
+  padding-left: 100px; /* Adjust this number to move it further right */
+  
+  /* Optional: if you want it to match the signature font of the header */
+  font-family: "Momo Signature", cursive; 
+  font-size: 40px;
+}
+
+/* Ensure the header container doesn't restrict it */
+#about .section-header {
+  justify-content: flex-start; /* Keeps it aligned to the left side */
+  width: 100%;
+}
+
+/* Specifically target the About title */
+#projects-title {
+  padding-left: 5px; /* Adjust this number to move it further right */
+  
+  /* Optional: if you want it to match the signature font of the header */
+  font-family: "Momo Signature", cursive; 
+  font-size: 40px;
+}
+
+/* Ensure the header container doesn't restrict it */
+#projects .section-header {
+  justify-content: flex-start; /* Keeps it aligned to the left side */
+  width: 100%;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover */
+  background-color: var(--card); /* Fills any empty space with your card color */
+  transition: transform 0.5s ease;
+}
+

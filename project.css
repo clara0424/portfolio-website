@@ -1,0 +1,219 @@
+/* project.css — Ultra-tight spacing version */
+
+/* 1. FORCE SCROLL AND RESET POSITIONING */
+html, body {
+  overflow-y: auto !important; 
+  overflow-x: hidden !important;
+  height: auto !important; 
+  min-height: 100% !important;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  scroll-behavior: auto !important; 
+}
+
+/* 2. THE MAIN CONTAINER */
+.project-main {
+  padding: 0;
+  margin: 0;
+  display: block !important; 
+  position: relative !important;
+  /* 🚨 MATCHING HEADER: Set this to exactly your header height */
+  padding-top: 80px; 
+  min-height: 100vh;
+  transform: none !important; 
+}
+
+/* 3. HERO IMAGE SECTION */
+.project-hero {
+  width: 100%;
+  height: auto; 
+  position: relative;
+  overflow: hidden;
+  /* 🚨 ZEROED OUT: No extra gaps around the image */
+  margin: 0; 
+  padding: 0;
+  line-height: 0; /* Prevents tiny ghost gaps at the bottom of images */
+  background-color: #ffffff;
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  margin: 0;
+}
+
+/* 4. CONTENT STYLING */
+.project-content {
+  /* 🚨 TIGHTENED: Reduced vertical padding between hero and text */
+  padding: 30px clamp(16px, 4vw, 40px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-content h1 {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 20px;
+  color: #0b0b0c;
+}
+
+.project-description {
+  margin-bottom: 30px;
+}
+
+.project-description p {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #0b0b0c;
+  margin: 0 0 15px;
+}
+
+/* 5. TOOLS STYLING */
+.project-tools h2 {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0 0 12px;
+  color: #0b0b0c;
+}
+
+.project-tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tools li {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  padding: 6px 14px;
+  background: #f8f8fb;
+  border-radius: 6px;
+  color: #0b0b0c;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 6. GALLERY STYLING */
+#dynamic-project-gallery {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto; 
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.image-caption {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #5b5b62;
+  margin-bottom: 25px;
+}
+
+/* 7. NAVIGATION */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px clamp(16px, 4vw, 40px);
+  max-width: 900px;
+  margin: 0 auto 60px;
+  border-top: 1px solid #e9e9ee;
+}
+
+.nav-project-link {
+  font-family: "Momo Signature", cursive;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0b0b0c;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.nav-project-link:hover {
+  color: #5b5b62;
+}
+
+/* 8. GALLERY VARIATIONS */
+.horizontal-gallery .gallery-grid {
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+/* This is the magic line: */
+#next-project {
+  margin-left: auto;
+}
+
+/* Ensure the base links have the transition ready */
+.nav-project-link {
+  display: inline-block; /* Required for transform to work */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: "Momo Signature", cursive;
+  color: var(--text);
+}
+
+/* Add the bounce effect on hover */
+.nav-project-link:hover {
+  transform: translateY(-4px); /* Moves it up 4px, matching your header */
+  color: var(--text-hover);    /* Changes color to match your theme */
+}
+
+/* This makes every gallery item take up the full width of the container */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* This forces 1 column only */
+  gap: 40px;                  /* Vertical spacing between images */
+  width: 100%;
+  max-width: 1000px;          /* Optional: keeps the images from getting too giant on wide screens */
+  margin: 0 auto;             /* Centers the gallery if you use a max-width */
+}
+
+/* Ensure the images fill that new full-width row */
+.gallery-image {
+  width: 100%;
+  height: auto;               /* Keeps the original proportion */
+  display: block;
+  border-radius: 8px;         /* Optional: keeps consistent with your card style */
+}
+
+.gallery-item {
+  width: 100%;
+  margin-bottom: 20px;        /* Extra breathing room between items */
+}
