@@ -317,3 +317,42 @@ main {
   transition: transform 0.5s ease;
 }
 
+/* --- MOBILE HEADER OPTIMIZATION --- */
+
+@media (max-width: 768px) {
+  .site-header {
+    /* Allow the header to grow in height if items need to wrap */
+    height: auto;
+    padding: 15px 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+    /* Optional: If you want it to stop being "sticky" on mobile to save screen space: */
+    /* position: relative; */
+  }
+
+  /* Center the name/logo on mobile */
+  #name-clara-juong-header {
+    order: -1; /* Puts your name at the very top */
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .nav-left, .nav-right {
+    width: 50%; /* Puts Projects/About on left, Icons on right */
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+  }
+
+  /* Adjust icon sizes so they aren't too small for fingers to tap */
+  .icon-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
