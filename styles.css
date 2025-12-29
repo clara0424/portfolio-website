@@ -317,42 +317,54 @@ main {
   transition: transform 0.5s ease;
 }
 
-/* --- MOBILE HEADER OPTIMIZATION --- */
+/* --- MOBILE HEADER: KEEP EVERYTHING ON ONE LINE --- */
 
+/* This only triggers when the screen is 768px wide or smaller */
 @media (max-width: 768px) {
   .site-header {
-    /* Allow the header to grow in height if items need to wrap */
-    height: auto;
-    padding: 15px 20px;
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 15px;
-    /* Optional: If you want it to stop being "sticky" on mobile to save screen space: */
-    /* position: relative; */
+    height: 60px;               /* Slimmer header */
+    padding: 0 10px;            /* Less side padding to gain space */
+    justify-content: space-between;
+    flex-wrap: nowrap !important; /* Forces one single line */
+    gap: 5px;                   /* Reduces space between the 3 main groups */
   }
 
-  /* Center the name/logo on mobile */
+  /* Shrink the Name/Logo */
   #name-clara-juong-header {
-    order: -1; /* Puts your name at the very top */
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.1rem !important;
+    letter-spacing: -0.5px;      /* Tighter letters to save width */
+    margin: 0 auto;              /* Keep it centered */
   }
 
-  .nav-left, .nav-right {
-    width: 50%; /* Puts Projects/About on left, Icons on right */
-    justify-content: center;
-    display: flex;
-    gap: 15px;
+  /* Shrink Left Navigation (Projects/About) */
+  .nav-left {
+    gap: 8px;                    /* Closer together */
   }
 
+  .nav-left .nav-btn {
+    font-size: 0.8rem !important;
+    padding: 2px 4px;            /* Smaller hit area */
+  }
+
+  /* Shrink Right Navigation (Social Icons) */
   .nav-right {
-    justify-content: flex-end;
+    gap: 6px;                    /* Tighter icon spacing */
   }
 
-  /* Adjust icon sizes so they aren't too small for fingers to tap */
   .icon-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 18px !important;      /* Smaller icons */
+    height: 18px !important;
   }
 }
+
+/* Extra small screens (iPhone SE / under 360px) */
+@media (max-width: 360px) {
+  #name-clara-juong-header {
+    font-size: 0.95rem !important;
+  }
+  
+  .nav-left .nav-btn {
+    font-size: 0.7rem !important;
+  }
+}
+
