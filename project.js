@@ -10,6 +10,34 @@
 
   // 3. PROJECT DATA
   const projects = {
+    project15: {
+      title: 'Live Coding: Team Smoking Caterpillar',
+      description: '<strong>Date of Creation:</strong> May 2025.<br><br><strong>Role:</strong> Coded both the visuals and music; for the day of the final performance, I was in charge of the Tidal code with my partner Jiho.<br><br><strong>Context of the project:</strong>This performance was our final project that put all of the skills that we have learned throughout the semester to a test. The entire performance was about 8 minutes long, and Jiho and I were in charge of live coding the Tidal (audio), while Adilbek and Jannah coded the Hydra (visual).<br><br><strong>Highlights of the project:</strong> The main theme of our piece was Alice in Wonderland with a few twists here and there by adding some random visuals and sounds instead of following the original story in a linear way. There were 3 main phases to our piece, with each phase building up on top of the previous phase:<br><br>Phase #1: We started with black-and-white visuals because we wanted to give a strong contrast between the beginning and the ending of our piece; and to match these mysterious, calm visuals, the music composition was also quieter and slower in pace.<br><br>Phase #2: Here, we began to include very obvious Alice references (i.e. video and audio of the door closing and opening, teacups, Alice in Wonderland soundtrack, etc.), and having the Cheshire cat appear both visually and sonically in the audio composition was the signal that we will be transitioning into Phase 3. Phase 2 was a mix of black-and-white and colored visuals, but with more variance and energy compared to Phase 1 both in visuals and music.<br><br>Phase #3: This was the craziest phase in our composition, and because we wanted to make this part the most engaging, we included a lot of fast beats and loud melodies.<br><br>Despite all of these transitions between phases, we tried to keep the main theme of mysterious, outworldly, fantastical, and intriguing vibes going.',
+      image: 'images/coding1.png',
+      tools: ['Pulsar', 'Supercollider', 'Tidal'],
+      galleryClass: 'horizontal-gallery',
+      galleryItems: [
+        { src: 'images/coding3.png', caption: 'Phase 1 of our piece; we only used black-and-white visuals primarily composed of circles, waves, and lines.' },
+        { src: 'images/coding4.png', caption: 'Phase 2 of our piece; because this was a transition phase from Phase 1 into Phase 3, which are two total opposite levels of energy, this phase was a mixture of both phases so there were more vibrance and intricate patterns.' },
+        { src: 'images/coding2.png', caption: 'And finally, in Phase 3 we went all out, and we tried to make this phase as disorienting, chaotic, and high-energy as much as possible, using many rotations and colors as well as fast-paced beats and layering many different audio samples to create this "chaotic discomfort" for the viewers.' },
+      ]
+    },
+    project14: {
+      title: 'UI/UX Design: Eclipse Soundscape',
+      description: '<strong>Date of Creation:</strong> December 2024.<br><br><strong>Role:</strong> Created wireframes and mock-up demos of the Eclipse Soundscape website.<br><br><strong>Context of the project:</strong> As our final project for a class called UX Design that I took back in New York, our team pitched how we can revise the homepage of the website of a company called Eclipse Soundscape to increase its user-friendliness and its accessibility.<br><br><strong>Highlights of the project:</strong> Here are some main edits we made on the homepage:<br><br>1) Revisions we made on the existing homepage features: the main edits we made were making a header with all the subsections within the page, as well as aligning all the text boxes and the buttons so that they were the same length. We also made the buttons and texts bigger so that they were more visible. We also revised it so that the user will clearly know which subsection of the homepage they are located in currently.<br><br>2) Adding in accessibility features into the homepage: we tried to accomodate users who might have color blindness by changing the original color palette of orange and black that the website had into other colors (i.e. navy + yellow) that has high contrast but also are still somewhat similar to the original palette. We also added titles and descriptions of each image as alt texts that will appear in the cases where those photos cannot appear due to technical difficulties. Finally, we also added an audio feature that will read out the text on the website for those who have visual impairment.',
+      image: 'images/7.png',
+      tools: ['Figma', 'Canva'],
+      galleryClass: 'horizontal-gallery',
+      galleryItems: [
+        { src: 'images/ui2.png', caption: 'We first began by sketching out the wireframes of the website that entails all the UX revisions we were going to make on its design.' },
+        { src: 'images/ui3.png', caption: 'Then we created a header with all the subsections of the homepage, and also made sure there will be a clear indication of which subsection the user is located in. We also added an audio button for those with visual impairment so that they can listen to the text on the website.' },
+        { src: 'images/ui4.png', caption: 'Across the entire homepage, we enlarged all the texts and the buttons so that all of them are aligned and spaced out evenly on the screen.' },
+        { src: 'images/ui5.png', caption: 'We also paid extra attention to small details such as keeping the size and alignment of the titles the same across the homepage, as well as removing images that had illustrated figures and replaced them with more professional, real-life images.' },
+        { src: 'images/ui8.png', caption: 'Accessibility simulator was the first accessibility check that we did on this website, which proved our fears that this website is not user-friendly towards those who have color blindness, which prompted us to make changes accordingly by revising the website color palette.' },
+        { src: 'images/ui6.png', caption: 'Checking the contrast across pages was the next accessibility check we did, which the website already did not have particular problems with.' },
+        { src: 'images/ui7.png', caption: 'The last accessibility check was using the Adee comprehensive accesibility tool, which led us to alter the titles and descriptions for each image so that even if images cannot appear on the screen due to some technical difficulties, the user will still be able to understand what the image and content is about by reading the alt text description.' },
+      ]
+    },
     project13: {
       title: 'Performing Robots: the Best Friend',
       description: '<strong>Date of Creation:</strong> December 2025.<br><br><strong>Role:</strong> In charge of programming, building, and fabricating the entire robot.<br><br><strong>Context of the project:</strong> This was a semester-long project that my partner and I have been working on for a class called Performing Robots. Everyone in the class were paired up, and each pair was responsible for building one robot from scratch that is able to perform at least 2-3 actions and can also be driven and controlled by a controller. We were in charge of building the "Best Friend" robot, which is one of the characters in the play that we have written as a class that will be performed at the end of the year Interactive Media showcase.<br><br><strong>Highlights of the project:</strong> Our robot, the Best Friend, had the following as her main actions: 1) Waist rotation from left to right; 2) Elbow bend and raise; 3) Fingers clacking; 4) LED eyebrow strips that will turn on and off based on the dialogues that the robot was performing; when the strips are on, it gives the illusion that the eyebrows of the robot are raised.<br><br><strong>The end result & reflection of the project:</strong> This was a project that I wanted to take on since freshman year, and while juggling and learning all sorts of skills such as engineering, coding, fabricating, and even writing the script was definitely a challenge, this class helped me get out of my comfort zone and not be afraid of physical computing.<br><br><strong>Additional documentation:</strong> I have documented my entire semester-long journey of building this robot and uploaded this journal on my Github, which can be accessed by clicking this link: https://github.com/clara0424/performingrobots.git',
@@ -17,14 +45,14 @@
       tools: ['Hume AI', 'Arduino', 'C++', 'Circuits, motors, controllers, LED strips, etc.'],
       galleryClass: 'horizontal-gallery',
       galleryItems: [
-        { src: 'images/1.png', caption: 'We started our fabrication process from the bottom to the top, and the body of the robot was made primarily out of cardboard, which we reinforced many times with smaller triangles inside the box structure.<br><br>The building process was the following:<br><br>1) Building the base & attaching the two motors and wheels on it;<br><br>2) Building the main lower torso of the robot;<br><br>3) Building the upper torso of the robot;<br><br>4) Programming all the code on C++ and using Arduinos and controllers to test and control the movements;<br><br>5) Adding the dialogues, which were made by using AI voice generator;<br><br>6) Building the arms and the hands;<br><br>7) Building the neck and the head;<br><br>8) Adding printed out facial features as well as LED strips for the eyebrows;<br><br>9) Programming any actions that were not added yet;<br><br>10) Attaching the costumes.' },
-        { src: 'images/2.png', caption: 'A lot of our time was spent on cutting wooden boards that will support the screws being drilled in.<br><br>We also spent a lot of time on soldering, which was extremely tedious and difficult because the wires kept detaching even after we soldered them onto the Arduino boards and chips.' },
-        { src: 'images/3.png', caption: 'We had many in-class rehearsals with all the robots where we would run the dialogues through together as well as the movements of the robots.' },
-        { src: 'images/5.png', caption: 'A challenge we had was keeping track of all the controllers and Arduino boards we had, because we ended up with a several of them, each with different purposes; there was one for the driving of the robot, and another for the general movements (i.e. waist, arms, etc.).' },
-        { src: 'images/7.png', caption: 'I painted our robot to have a pinkish-beige tint as its skin color with acrylic paint.' },
-        { src: 'images/8.png', caption: 'We also cut a lot of wood using the cutter in the Scene Shop.' },
-        { src: 'images/6.png', caption: 'This was taken after our final robot performance on the day of the Interactive Media showcase.<br><br>Pictured is myself, our robot, and Jiho, my robot partner (from left to right order).' },
-        { src: 'images/4.png', caption: 'A class photo with all of our robots and our professor, Michael Shiloh, on the stage after our final performance!' }
+        { src: 'images/1.png', caption: '' },
+        { src: 'images/2.png', caption: '' },
+        { src: 'images/3.png', caption: '' },
+        { src: 'images/5.png', caption: '' },
+        { src: 'images/7.png', caption: '' },
+        { src: 'images/8.png', caption: '' },
+        { src: 'images/6.png', caption: '' },
+        { src: 'images/4.png', caption: '' }
       ]
     },
     project2: {
@@ -211,7 +239,7 @@
   loadProjectGallery(project);
 
   // 6. BOTTOM NAVIGATION (FIXED ORDER)
-  const projectOrder = ["project13", "project9", "project10", "project11", "project2", "project3", "project5", "project4", "project6", "project7", "project12", "project8"];
+  const projectOrder = ["project13", "project9", "project10", "project11", "project15", "project14", "project2", "project3", "project5", "project4", "project6", "project7", "project12", "project8"];
   const currentIndex = projectOrder.indexOf(projectId || 'project9');
   
   const prevProjectLink = document.getElementById('prev-project');
