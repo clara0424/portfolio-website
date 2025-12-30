@@ -29,7 +29,7 @@
       tools: ['Figma', 'Canva'],
       galleryClass: 'horizontal-gallery',
       galleryItems: [
-        { src: 'images/ui2.png', caption: 'We first began by sketching out the wireframes of the website that entails all the UX revisions we were going to make on its design.' },
+        { src: 'images/ui2.png', caption: 'We first began by sketching out the wireframes of the website that entail all the UX revisions we were going to make on its design.' },
         { src: 'images/ui3.png', caption: 'Then we created a header with all the subsections of the homepage, and also made sure there will be a clear indication of which subsection the user is located in. We also added an audio button for those with visual impairment so that they can listen to the text on the website.' },
         { src: 'images/ui4.png', caption: 'Across the entire homepage, we enlarged all the texts and the buttons so that all of them are aligned and spaced out evenly on the screen.' },
         { src: 'images/ui5.png', caption: 'We also paid extra attention to small details such as keeping the size and alignment of the titles the same across the homepage, as well as removing images that had illustrated figures and replaced them with more professional, real-life images.' },
@@ -45,14 +45,14 @@
       tools: ['Hume AI', 'Arduino', 'C++', 'Circuits, motors, controllers, LED strips, etc.'],
       galleryClass: 'horizontal-gallery',
       galleryItems: [
-        { src: 'images/1.png', caption: '' },
-        { src: 'images/2.png', caption: '' },
-        { src: 'images/3.png', caption: '' },
-        { src: 'images/5.png', caption: '' },
-        { src: 'images/7.png', caption: '' },
-        { src: 'images/8.png', caption: '' },
-        { src: 'images/6.png', caption: '' },
-        { src: 'images/4.png', caption: '' }
+        { src: 'images/1.png', caption: 'We started our fabrication process from the bottom to the top, and the body of the robot was made primarily out of cardboard, which we reinforced many times with smaller triangles inside the box structure.<br><br>The building process was the following:<br><br>1) Building the base & attaching the two motors and wheels on it;<br><br>2) Building the main lower torso of the robot;<br><br>3) Building the upper torso of the robot;<br><br>4) Programming all the code on C++ and using Arduinos and controllers to test and control the movements;<br><br>5) Adding the dialogues, which were made by using AI voice generator;<br><br>6) Building the arms and the hands;<br><br>7) Building the neck and the head;<br><br>8) Adding printed out facial features as well as LED strips for the eyebrows;<br><br>9) Programming any actions that were not added yet;<br><br>10) Attaching the costumes.' },
+        { src: 'images/2.png', caption: 'A lot of our time was spent on cutting wooden boards that will support the screws being drilled in.<br><br>We also spent a lot of time on soldering, which was extremely tedious and difficult because the wires kept detaching even after we soldered them onto the Arduino boards and chips.' },
+        { src: 'images/3.png', caption: 'We had many in-class rehearsals with all the robots where we would run the dialogues through together as well as the movements of the robots.' },
+        { src: 'images/5.png', caption: 'A challenge we had was keeping track of all the controllers and Arduino boards we had, because we ended up with a several of them, each with different purposes; there was one for the driving of the robot, and another for the general movements (i.e. waist, arms, etc.).' },
+        { src: 'images/7.png', caption: 'I painted our robot to have a pinkish-beige tint as its skin color with acrylic paint.' },
+        { src: 'images/8.png', caption: 'We also cut a lot of wood using the cutter in the Scene Shop.' },
+        { src: 'images/6.png', caption: 'This was taken after our final robot performance on the day of the Interactive Media showcase.<br><br>Pictured is myself, our robot, and Jiho, my robot partner (from left to right order).' },
+        { src: 'images/4.png', caption: 'A class photo with all of our robots and our professor, Michael Shiloh, on the stage after our final performance!' }
       ]
     },
     project2: {
